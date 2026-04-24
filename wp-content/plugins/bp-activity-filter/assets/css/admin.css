@@ -1,0 +1,466 @@
+/**
+ * BuddyPress Activity Filter - Admin CSS (Plugin-Specific Only)
+ * 
+ * Contains only styles specific to the Activity Filter plugin settings.
+ * General dashboard styles are handled by the shared Wbcom integration.
+ * 
+ * @package BuddyPress_Activity_Filter
+ * @version 4.0.0
+ */
+
+/* ==========================================================================
+   ACTIVITY FILTER SPECIFIC STYLES
+   ========================================================================== */
+
+/* Activity Filter Settings Page */
+.bp-activity-filter-admin {
+    max-width: 1200px;
+}
+
+.bp-activity-filter-admin .wbcom-version {
+    font-size: 14px;
+    color: #666;
+    background: #f0f0f1;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+/* Settings Form Tables */
+.bp-activity-filter-admin .form-table th {
+    width: 220px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #f0f0f1;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.bp-activity-filter-admin .form-table td {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f1;
+    vertical-align: top;
+}
+
+.bp-activity-filter-admin .form-table tr:last-child th,
+.bp-activity-filter-admin .form-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Settings Sections */
+.settings-section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.settings-section h2 {
+    color: #23282d;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    padding: 0;
+    border-bottom: 2px solid #f0f0f1;
+    padding-bottom: 12px;
+}
+
+.settings-section > p {
+    margin: 8px 0 25px 0;
+    color: #646970;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Hidden Activities Checkboxes */
+.bp-activity-checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background: #fafafa;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.bp-activity-checkbox-label:hover {
+    background: #f0f6fc;
+    border-color: #c3c4c7;
+}
+
+.bp-activity-checkbox-label.checked {
+    background: #e7f3ff;
+    border-color: #0073aa;
+}
+
+.bp-activity-checkbox {
+    margin: 0 12px 0 0;
+    flex-shrink: 0;
+    transform: scale(1.1);
+    accent-color: #0073aa;
+}
+
+.checkbox-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-label-text {
+    font-weight: 500;
+    font-size: 14px;
+    color: #23282d;
+}
+
+.activity-key {
+    font-size: 11px;
+    color: #8c8f94;
+    background: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+.hidden-activities-actions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f1;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* CPT Settings */
+.cpt-setting-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.cpt-setting-item:hover {
+    border-color: #c3c4c7;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cpt-setting-item.disabled {
+    opacity: 0.7;
+    background: #f5f5f5;
+    border-color: #ddd;
+}
+
+.cpt-header {
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.cpt-main-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #23282d;
+    cursor: pointer;
+}
+
+.cpt-main-label input[type="checkbox"] {
+    margin-right: 12px;
+    margin-top: 0;
+}
+
+.cpt-meta {
+    font-size: 12px;
+    color: #8c8f94;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.cpt-settings {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f1;
+}
+
+.cpt-label-setting label {
+    font-weight: 500;
+    color: #23282d;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cpt-label-input {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5px;
+    padding: 8px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.cpt-label-input:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+    outline: none;
+}
+
+.cpt-label-input:disabled {
+    background: #f6f7f7;
+    color: #a7aaad;
+    cursor: not-allowed;
+}
+
+/* Activity Preview */
+.cpt-preview {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 6px;
+    border-left: 4px solid #0073aa;
+}
+
+.cpt-preview strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #0073aa;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.activity-preview-text {
+    font-size: 13px;
+    color: #23282d;
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #c3c4c7;
+    line-height: 1.5;
+}
+
+.activity-preview-text a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.activity-preview-text a:hover {
+    text-decoration: underline;
+}
+
+/* Global Settings */
+.cpt-global-settings {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 6px;
+    border-left: 4px solid #72aee6;
+}
+
+.cpt-global-settings h4 {
+    margin: 0 0 15px 0;
+    color: #23282d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cpt-global-settings label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.cpt-global-settings input[type="checkbox"] {
+    margin: 3px 0 0 0;
+    flex-shrink: 0;
+}
+
+/* Submit Area */
+.submit {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f1;
+    background: #f8f9fa;
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Tab Content Wrapper */
+.tab-content-wrapper {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 0 0 4px 4px;
+    padding: 0;
+    margin-top: -1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Enhanced Form Controls */
+.bp-activity-filter-admin select,
+.bp-activity-filter-admin input[type="text"],
+.bp-activity-filter-admin input[type="email"],
+.bp-activity-filter-admin input[type="url"] {
+    min-width: 300px;
+    max-width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bp-activity-filter-admin select:focus,
+.bp-activity-filter-admin input[type="text"]:focus,
+.bp-activity-filter-admin input[type="email"]:focus,
+.bp-activity-filter-admin input[type="url"]:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+    outline: none;
+}
+
+.bp-activity-filter-admin input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+    accent-color: #0073aa;
+}
+
+/* Notices */
+.bp-activity-filter-admin .notice.inline {
+    display: block;
+    margin: 15px 0;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bp-activity-filter-admin .form-table th {
+        width: auto;
+        display: block;
+        padding: 15px 15px 5px 15px;
+    }
+    
+    .bp-activity-filter-admin .form-table td {
+        display: block;
+        padding: 5px 15px 15px 15px;
+    }
+    
+    .cpt-setting-item {
+        padding: 15px;
+    }
+    
+    .cpt-main-label {
+        font-size: 14px;
+    }
+    
+    .hidden-activities-actions {
+        flex-direction: column;
+    }
+    
+    .hidden-activities-actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .bp-activity-filter-admin select,
+    .bp-activity-filter-admin input[type="text"] {
+        min-width: 100%;
+    }
+}
+
+/* Accessibility Improvements */
+.bp-activity-filter-admin *:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .bp-activity-checkbox-label,
+    .cpt-setting-item {
+        border-width: 2px;
+    }
+    
+    .activity-key {
+        border: 1px solid #8c8f94;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .bp-activity-checkbox-label,
+    .cpt-setting-item {
+        transition: none;
+    }
+}
+/* ==========================================================================
+   HIDDEN ACTIVITIES VERTICAL LAYOUT - FORCE OVERRIDE
+   ========================================================================== */
+
+/* Simple vertical layout fix */
+.bp-activity-checkbox-label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background: #fafafa;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+}
+
+.bp-activity-checkbox-label:hover {
+    background: #f0f6fc;
+    border-color: #c3c4c7;
+}
+
+.bp-activity-checkbox-label.checked {
+    background: #e7f3ff;
+    border-color: #0073aa;
+}
+
+.bp-activity-checkbox-label.readonly {
+    background: #f6f7f7;
+    border-color: #dcdcde;
+    color: #8c8f94;
+    opacity: 0.7;
+}
+
+.core-activities-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f0f6fc;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    border-left: 4px solid #0073aa;
+}
+
+.section-title {
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.section-title .dashicons {
+    margin-right: 8px;
+}

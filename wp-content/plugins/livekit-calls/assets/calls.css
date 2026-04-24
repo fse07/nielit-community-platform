@@ -1,0 +1,53 @@
+#lkc-modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+  z-index: 99999; display: none;
+}
+#lkc-modal-inner {
+  position: absolute; inset: 5%;
+  background: #111; color: #fff; border-radius: 12px;
+  display: flex; flex-direction: column; padding: 16px;
+}
+#lkc-header { display:flex; justify-content:space-between; margin-bottom:10px; font-size:16px; }
+#lkc-videos {
+  flex: 1; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px; overflow: auto;
+}
+#lkc-videos .lkc-video {
+  width: 100%; height: auto; max-height: 60vh;
+  background:#000; border-radius: 8px; object-fit: cover;
+}
+.lkc-audio-placeholder {
+  display:flex; align-items:center; justify-content:center;
+  font-size: 36px; color: #888; min-height: 200px;
+  background: #222; border-radius: 8px;
+}
+#lkc-controls {
+  display:flex; justify-content:center; gap:12px; margin-top:12px;
+}
+#lkc-controls button {
+  font-size: 22px; padding: 10px 16px; border-radius: 999px;
+  border: none; background:#333; color:#fff; cursor:pointer;
+}
+#lkc-controls #lkc-hangup { background:#c0392b; }
+
+/* Incoming call popup */
+#lkc-incoming {
+  position: fixed; top: 20px; right: 20px; z-index: 100000;
+  background: #fff; border: 2px solid #2ecc71; border-radius: 12px;
+  padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  min-width: 300px; animation: lkc-pulse 1s infinite;
+}
+@keyframes lkc-pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(46,204,113,0.3); }
+  50%      { box-shadow: 0 8px 32px rgba(46,204,113,0.7); }
+}
+#lkc-ring-title { font-weight: bold; font-size: 16px; margin-bottom: 6px; color:#2ecc71; }
+#lkc-ring-from  { font-size: 15px; margin-bottom: 12px; color:#222; }
+#lkc-ring-buttons { display:flex; gap: 10px; }
+#lkc-ring-buttons button {
+  flex: 1; padding: 10px; font-size: 14px; border: none;
+  border-radius: 6px; cursor: pointer; color: #fff;
+}
+#lkc-accept  { background: #2ecc71; }
+#lkc-decline { background: #e74c3c; }

@@ -1,0 +1,13 @@
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `ip` varchar(128) NOT NULL DEFAULT '',
+  `ip_geo` text NOT NULL,
+  `emoji` varchar(255) NOT NULL DEFAULT '',
+  `related_id` bigint(20) NOT NULL DEFAULT '0',
+  `related_type` varchar(128) NOT NULL DEFAULT '',
+  `dateline` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `related_id` (`related_id`),
+  KEY `related_type` (`related_type`),
+  KEY `dateline` (`dateline`),
+  KEY `ip` (`ip`),
+  KEY `emoji` (`emoji`)
